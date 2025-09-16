@@ -1,0 +1,83 @@
+/* layout.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin:0px;
+}
+.layout {
+    display: flex;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Prevent horizontal scroll */
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar on the left */
+.aside {
+    width: 250px;
+    /* Fixed width for sidebar */
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Optional shadow for depth */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    /* Scroll sidebar if content is long */
+}
+
+/* Right side container for header and main */
+.right-side {
+    flex: 1;
+    /* Take remaining width */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Header fixed height */
+.right-side>header {
+    height: 60px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #222;
+    user-select: none;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    /* Prevent header from shrinking */
+}
+
+/* Main content fills remaining space and scrolls */
+.main {
+    flex: 1;
+    /* Take all vertical space below header */
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background-color: #f5f7fa;
+}
+
+/* Optional: customize scrollbar for main */
+.main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}

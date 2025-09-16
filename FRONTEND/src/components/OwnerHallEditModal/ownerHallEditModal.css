@@ -1,0 +1,126 @@
+.owner-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.owner-modal {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  padding: 24px 28px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.owner-modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #e53e3e;
+  transition: color 0.2s ease;
+}
+
+.owner-modal-close-btn:hover:not(:disabled) {
+  color: #9b2c2c;
+}
+
+.owner-modal-close-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.owner-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.owner-modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.owner-modal-label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 6px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.owner-modal-input,
+.owner-modal-select {
+  padding: 10px 12px;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2d3748;
+  outline-offset: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.owner-modal-input:focus,
+.owner-modal-select:focus {
+  border-color: #3182ce;
+  outline: none;
+}
+
+.owner-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.owner-modal-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 90px;
+}
+
+.cancel-btn {
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background-color: #e2e8f0;
+}
+
+.confirm-btn {
+  background-color: #3182ce;
+  color: #fff;
+}
+
+.confirm-btn:hover:not(:disabled) {
+  background-color: #2b6cb0;
+}
+
+.owner-modal-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

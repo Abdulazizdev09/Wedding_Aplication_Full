@@ -1,0 +1,253 @@
+.hall-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    height: fit-content;
+}
+
+.hall-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hall-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.hall-card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.hall-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hall-card:hover .hall-card-image img {
+    transform: scale(1.05);
+}
+
+.hall-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hall-card:hover .hall-card-overlay {
+    opacity: 1;
+}
+
+.view-details {
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.hall-card-overlay:hover .view-details {
+    background-color: white;
+    color: #2563eb;
+}
+
+.hall-card-content {
+    padding: 20px;
+}
+
+.hall-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.hall-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.hall-card-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.rating-stars {
+    color: #fbbf24;
+    font-size: 14px;
+}
+
+.rating-count {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.hall-card-description {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.hall-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.hall-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-icon {
+    font-size: 14px;
+    width: 16px;
+}
+
+.detail-text {
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.hall-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.hall-card-price {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.price-label {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.price-amount {
+    color: #2563eb;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.price-period {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.book-now-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.hall-card-features {
+    padding: 0 20px 20px;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.feature-tag {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.feature-tag.more {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hall-card-content {
+        padding: 16px;
+    }
+    
+    .hall-card-header {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    
+    .hall-card-title {
+        font-size: 18px;
+    }
+    
+    .hall-card-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .book-now-btn {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    .hall-card-image {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hall-card-details {
+        gap: 6px;
+    }
+    
+    .detail-text {
+        font-size: 12px;
+    }
+    
+    .hall-card-description {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,23 @@
+.user-profile {
+  padding: 12px 16px;
+  border-top: 1px solid #d1d5db; /* lighter gray */
+  cursor: pointer;
+  background-color: #f9fafb; /* very light gray */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.user-profile:hover,
+.user-profile:focus {
+  background-color: #e5e7eb; /* slightly darker on hover */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.user-username {
+  font-size: 1rem;
+  color: #4b5563; /* cool gray */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
