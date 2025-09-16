@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getToken } from "../utils/auth"; // Your function to get saved token (e.g., from localStorage)
 
-const API_BASE_URL = "http://localhost:9000";
+const API_BASE_URL = "https://wedding-application-lfp2.onrender.com";
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
