@@ -1,5 +1,5 @@
 import React from 'react';
-import "./navmenu.css";
+import "./navMenu.css";
 
 function NavMenu({ icon, link, isActive, onClick }) {
     return (
